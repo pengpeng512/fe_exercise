@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+.sheji{width:999px;height:496px;background-color:green;overflow:hidden;}
+ a{display: block;
+  width: 198px;
+  height: 495px;
+  overflow: hidden;
+  float: left;
+  border-right: 1px solid #f5f5f5;
+  text-decoration: none;
+  -webkit-transition: width 0.6s ease-in;
+}
+.active{
+width:400px;
+}
+
+</style>
+ </head>
+ <body>
+  <div class="sheji" id="she">
+<a class="active"><img src="images/TB1.jpg" width="400" height="495"/></a>
+<a class=""><img src="images/TB2.jpg" width="400" height="495"/></a>
+<a class=""><img src="images/TB3.jpg" width="400" height="495"/></a>
+<a class=""><img src="images/TB14.jpg" width="400" height="495"/></a>
+</div>
+<script>
+var index=0;
+var aLinks=document.getElementsByTagName('a');
+for(var i=0,l= aLinks.length;i<l;i++)
+{
+    aLinks[i].onmouseover=function(){
+	var sheji=document.getElementById("she");
+	for(var j=0;j<sheji.children.length;j++){
+	sheji.children[j].setAttribute("class","");
+	}
+    this.setAttribute("class","active");
+}
+
+
+</script>
+ </body>
+</html>
